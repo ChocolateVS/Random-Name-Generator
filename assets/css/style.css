@@ -73,7 +73,9 @@ p {
 #error {
 	color:red;
 }
-
+#original_button, #custom_button, #create_button {
+	margin:10px;
+}
 .#class_select {
 	width:100px;
 }

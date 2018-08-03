@@ -10,9 +10,13 @@
 		<main>
 		<!-- Main -->
 		<center>
-			<h1 id="welcome">Welcome to the random name generator for my classes</h1>
+			<h1 id="welcome">Welcome to the randomly random, random thing generator</h1>
+			<h2 id="h2_choose">Would you like to use an original generator, Someone elses, Or create your own?</h2>
 			<h2 id="h2_select">Please Select a class</h2>
 			<h2 id="h2_click">Click below for a random name</h2>
+			<input type="button" id="original_button" value="Original" onClick="original_selector()">
+			<input type="button" id="custom_button" value="Custom" onClick="custom_selector()">
+			<input type="button" id="create_button" value="Create" onClick="create()">
 			<button id="random_button" onclick="random_name()">Click Me</button>
 			<br>
 		</center>
@@ -28,7 +32,7 @@
 				<option value="7">All Students (My Classes)</option>
 				<option value="8">All Teachers (My Classes)</option>
 			</select>
-			<input type="button" id="class_select_button" value="OK" onClick="selctor()">
+			<input type="button" id="class_select_button" value="OK" onClick="selector()">
 			<p id="error">Please Select A class!</p>
 		<!-- Text -->
 			<span id="random_result"></span>
@@ -48,12 +52,18 @@
 			</p>
 		<!-- Script -->
 			<script>
+			//Hide Items on page load
 			document.getElementById("tip").style.visibility = "hidden"; 
 			document.querySelector("#error").style.display = "none";
 			document.querySelector("#h2_click").style.display = "none"; 
 			document.querySelector("#random_button").style.display = "none"; 
-			document.querySelector("#thatsall").style.display = "none"; 	
+			document.querySelector("#thatsall").style.display = "none"; 
+			document.querySelector("#h2_select").style.display = "none";
+			document.querySelector("#class_select").style.display = "none";
+			document.querySelector("#class_select_button").style.display = "none";			
 			document.querySelector("#current_container").style.visibility = "hidden"; 	
+			
+			//Original Arrays
 			var mae = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","Mrs Harris :)"];
 			var eng = ["Rowan","Isaac","Racheal","Nate", "Tui","Hinewai","Josh","Tommy","Olivia","Sophie","Lucy","Chloe","Emily","Rose","Jessica","Samuel","Harry"];
 			var mus = ["Rowan", "Isaac","Caleb","Nate","Ben","Lucy","Molly","Rose","Racheal","Harry","Macy","Henry","Cantona???",];
@@ -63,43 +73,57 @@
 			var form = ["Rowan","Toby","Josh","Jacob","Jack","Dallas","Cole","Starsha","Philliper","Yorlanda?","Ben"];
 			var all_s = ["Rowan"];
 			var all_t = [];
+			
+			//Other Variables
 			var x = "";
-			function selctor() {
-			var selected_class = document.getElementById("class_select").value;
-			console.log(selected_class)
-			if (selected_class > 0) {
-			document.querySelector("#error").style.display = "none";
-				if (selected_class == 1) {
-				 x = mae;
-				}
-				if (selected_class == 2) {
-				 x = eng;
-				}
-				if (selected_class == 3) {
-				 x = mus;
-				}
-				if (selected_class == 4) {
-				 x = dth;
-				}
-				if (selected_class == 5) {
-				 x = scp;
-				}
-				if (selected_class == 6) {
-				 x = pe;
-				}
-				if (selected_class == 7) {
-				 x = all_s;
-				}
-				if (selected_class == 8) {
-				 x = all_t;
-				}
-				document.querySelector("#class_select").style.display = "none"; 
-				document.querySelector("#class_select_button").style.display = "none"; 
-				document.querySelector("#random_button").style.display = "block"; 
-				document.querySelector("#h2_click").style.display = "block"; 
+			
+			function original_selector() {
+				document.querySelector("#h2_select").style.display = "block";
+				document.querySelector("#class_select").style.display = "inline-block";
+				document.querySelector("#class_select_button").style.display = "inline-block";
+				document.querySelector("#h2_choose").style.display = "block";
+				document.querySelector("#create_button").style.display = "none";
+				document.querySelector("#custom_button").style.display = "none";
+				document.querySelector("#original_button").style.display = "none";
+			}
+			
+			//Original Selector Function
+			function selector() {
+				var selected_class = document.getElementById("class_select").value;
+				console.log(selected_class)
+				if (selected_class > 0) {
+				document.querySelector("#error").style.display = "none";
+					if (selected_class == 1) {
+					 x = mae;
+					}
+					if (selected_class == 2) {
+					 x = eng;
+					}
+					if (selected_class == 3) {
+					 x = mus;
+					}
+					if (selected_class == 4) {
+					 x = dth;
+					}
+					if (selected_class == 5) {
+					 x = scp;
+					}
+					if (selected_class == 6) {
+					 x = pe;
+					}
+					if (selected_class == 7) {
+					 x = all_s;
+					}
+					if (selected_class == 8) {
+					 x = all_t;
+					}
+					document.querySelector("#class_select").style.display = "none"; 
+					document.querySelector("#class_select_button").style.display = "none"; 
+					document.querySelector("#random_button").style.display = "block"; 
+					document.querySelector("#h2_click").style.display = "block"; 
 			}
 				else {
-				document.querySelector("#error").style.display = "block";
+					document.querySelector("#error").style.display = "block";
 				}
 			}
 			
