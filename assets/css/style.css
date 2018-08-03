@@ -1,0 +1,55 @@
+body {
+	background-image:url(../images/background.jpg);
+	background-attachment:none;
+	background-size:cover;
+	font-family:Arvo;
+	color:rgb(58,153,195);
+	text-align:center;
+}
+
+h2 {
+	padding:20px;
+}
+
+button, input {
+	background-color:rgb(58,153,195);
+	border-radius:5px;
+	border:none;
+	width:100px;
+	height:30px;
+	font-family:Arvo;
+	transition-duration:1s;
+}
+
+button:hover, input:hover {
+	transform:scale(1.2);
+	transition-duration:1s;
+}
+
+span {
+	font-size:20px;
+	padding:20px;
+	margin:10px;
+	width:250px;
+	height:500px;
+}
+
+.current_names {
+	padding:0;
+	margin:0;
+	font-size:18px;
+}
+#box {
+	left:0;
+	position:absolute;
+	float:left;
+	background-color:rgba(100,100,100,0.6);
+}
+footer {
+	float:right;
+	bottom:0;
+	right:0;
+	position:absolute;
+	padding-right:10px;
+	color:white;
+}
