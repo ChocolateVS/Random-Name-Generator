@@ -24,9 +24,9 @@
 				document.getElementById('random_result').innerHTML = x[random];
 				console.log(x[random]);
 			    add_list()
-			}
-			function add_list() {
-			console.log("hi")
+				var newName = document.createElement("p");
+				newName.innerHTML = x[random];
+				document.querySelector("#box").appendChild(newName);
 			}
 			</script>
 			<span id="box">
