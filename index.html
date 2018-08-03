@@ -10,7 +10,7 @@
 		<main>
 			<h1>Welcome to the random name generator for MAE1</h1>
 			<h2>Click below for a random name</h2>
-			<button id="randombutton" onclick="random_name()">Click Me</button>
+			<button id="random_button" onclick="random_name()">Click Me</button>
 			<!--<input type="button" id="refresh" value="Refresh Page" onClick="window.location.reload()">-->
 			<br>
 			<br>
@@ -27,6 +27,7 @@
 				newName.innerHTML = x[random];
 				document.querySelector("#box").appendChild(newName);
 				x.splice(random,1);
+				if(x.length == 0) document.querySelector("#random_button").style.display = "none";
 			}
 			</script>
 			<span id="box">
