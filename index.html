@@ -18,7 +18,7 @@
 			<br>
 			<span id="random_result"></span>
 			<script>
-			var x = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Alistair","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","","Mrs Harris :)"];
+			var x = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","","Mrs Harris :)"];
 			function random_name() {
 				var random = Math.floor(Math.random()*(x.length));
 				document.getElementById('random_result').innerHTML = x[random];
@@ -27,7 +27,8 @@
 				newName.innerHTML = x[random];
 				document.querySelector("#box").appendChild(newName);
 				x.splice(random,1);
-				if(x.length == 0) document.querySelector("#random_button").style.display = "none" document.querySelector("#random_result").style.display = "none";
+				if(x.length == 0) document.querySelector("#random_button").style.display = "none"; 
+				if(x.length == 0) document.querySelector("#random_result").style.display = "none";
 			}
 			</script>
 			<span id="box">
