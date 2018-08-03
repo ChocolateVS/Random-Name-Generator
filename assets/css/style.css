@@ -6,6 +6,7 @@ body {
 	font-family:Arvo;
 	color:rgb(58,153,195);
 	text-align:center;
+	position:relative
 }
 
 h2 {
@@ -31,9 +32,10 @@ button:hover, input:hover {
 	font-size:30px;
 }
 .current_names {
-	padding:20;
+	padding:0;
 	margin:0;
 	font-size:18px;
+	color:white;
 }
 span#box {
 	font-size:20px;

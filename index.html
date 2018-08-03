@@ -17,13 +17,24 @@
 			<span id="random_result"></span>
 			<br>
 			<span id="thatsall">That's all of Us!</span>
+			<div id="current_container">
+				<span id="box">
+					<h2 class="current_names">Current Names</h2>
+					<br>
+				</span>
+			</div>
+			<p id="tip">
+			Tip, to see all the names in order, HOLD: CTRL + SHIFT + I, then click CONSOLE 
+			<br>
+			Dont worry about the errors (highlited in red), they shouldn't be there any anyway
+			</p>
 			<script>
 			var x = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","Mrs Harris :)"];
-			document.querySelector("#thatsall").style.visibility = "hidden"; 
-			document.querySelector("#tip").style.visibility = "hidden"; 
-			document.querySelector("#box").style.visibility = "visible"; 
+			document.getElementById("tip").style.visibility = "hidden"; 
+			document.querySelector("#thatsall").style.visibility = "hidden";		
+			document.querySelector("#current_container").style.visibility = "hidden"; 		
 			function random_name() {
-				document.querySelector("#box").style.visibility = "visible"; 
+				document.querySelector("#current_container").style.visibility = "visible"; 
 				var random = Math.floor(Math.random()*(x.length));
 				document.getElementById('random_result').innerHTML = x[random];
 				console.log(x[random]);
@@ -41,17 +52,6 @@
 				}
 			}
 			</script>
-			<div id="current_container">
-				<span id="box">
-					<h2 class="current_names">Current Names</h2>
-					<br>
-				</span>
-			</div>
-			<p id="tip">
-			Tip, to see all the names in order, HOLD: CTRL + SHIFT + I, then click CONSOLE 
-			<br>
-			Dont worry about the errors (highlited in red), there shouldn't be any anyway
-			</p>
 		</main>
 		<footer>
 		<input type="button" id="refresh" value="Refresh Page" onClick="window.location.reload()">
