@@ -2,6 +2,7 @@ body {
 	background-image:url(../images/background.jpg);
 	background-attachment:none;
 	background-size:cover;
+	background-repeat:none;
 	font-family:Arvo;
 	color:rgb(58,153,195);
 	text-align:center;
@@ -31,7 +32,7 @@ span {
 	padding:20px;
 	margin:10px;
 	width:250px;
-	height:500px;
+	height:auto;
 }
 
 .current_names {
