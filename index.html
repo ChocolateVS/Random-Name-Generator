@@ -18,15 +18,15 @@
 			<br>
 			<span id="random_result"></span>
 			<script>
+			var x = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mia","Alistair","Blake","Zara","Josie","William","Emma","Mrs Harris :)"];
 			function random_name() {
-				var x = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mia","Alistair","Blake","Zara","Josie","William","Emma","Mrs Harris :)"];
 				var random = Math.floor(Math.random()*(x.length));
 				document.getElementById('random_result').innerHTML = x[random];
 				console.log(x[random]);
 				var newName = document.createElement("p");
 				newName.innerHTML = x[random];
 				document.querySelector("#box").appendChild(newName);
-				x.splice(random,1)
+				x.splice(random,1);
 			}
 			</script>
 			<span id="box">
