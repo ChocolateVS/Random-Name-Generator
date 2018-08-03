@@ -18,7 +18,7 @@
 			<br>
 			<span id="random_result"></span>
 			<script>
-			var x = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","","Mrs Harris :)"];
+			var x = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","Mrs Harris :)"];
 			function random_name() {
 				var random = Math.floor(Math.random()*(x.length));
 				document.getElementById('random_result').innerHTML = x[random];
@@ -31,10 +31,11 @@
 				if(x.length == 0) document.querySelector("#random_result").style.display = "none";
 			}
 			</script>
-			<span id="box">
-			<h2 class="current_names">Current Names</h2>
-			
-			</span>
+			<div id="current_container">
+				<h2 class="current_names">Current Names</h2>
+				<span id="box">
+				</span>
+			</div>
 		</main>
 		<footer>
 		<input type="button" id="refresh" value="Refresh Page" onClick="window.location.reload()">
