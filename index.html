@@ -17,7 +17,7 @@
 			<br>
 		</center>
 		<!-- Selector -->	
-			<select style="width: 200px" id="class_select" name="class_selector">
+			<select style="width: 300px; height: 30px" id="class_select" name="class_selector">
 				<option value="0" selected="">Please Select</option>
 				<option value="1">MAE1</option>
 				<option value="2">ENA1</option>
@@ -25,8 +25,8 @@
 				<option value="4">DTH</option>
 				<option value="5">SCP</option>
 				<option value="6">PE</option>
-				<option value="7">All Students</option>
-				<option value="8">All Teachers</option>
+				<option value="7">All Students (My Classes)</option>
+				<option value="8">All Teachers (My Classes)</option>
 			</select>
 			<input type="button" id="class_select_button" value="OK" onClick="selctor()">
 			<p id="error">Please Select A class!</p>
@@ -56,11 +56,12 @@
 			document.querySelector("#current_container").style.visibility = "hidden"; 	
 			var mae = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","Mrs Harris :)"];
 			var eng = ["Rowan","Isaac","Racheal","Nate", "Tui","Hinewai","Josh","Tommy","Olivia","Sophie","Lucy","Chloe","Emily","Rose","Jessica","Samuel","Harry"];
-			var mus = ["Rowan", "Isaac", "Nate","Ben","Lucy","Molly","Racheal","Harry","Macy","Henry","Cantona???",];
-			var dth = [];
-			var scp = [];
-			var pe = [];
-			var all_s = [];
+			var mus = ["Rowan", "Isaac","Caleb","Nate","Ben","Lucy","Molly","Rose","Racheal","Harry","Macy","Henry","Cantona???",];
+			var dth = ["Rowan","Blake","Aidan C","Aidan O","Ethan","Frank","Samuel","Isaac","Nate","Tyler","Alice","Jared","","","","","","","","","",""];
+			var scp = ["Rowan","Aidan","Hasan","Oran","Jack","Jacob","Mohit","Reuben","Luke"];
+			var pe = ["Rowan","Lucy","Charlie","Jono St","Ben","Jono Sa","Jacob","Aidan","Tyler","Jared","Luke","","",""];
+			var form = ["Rowan","Toby","Josh","Jacob","Jack","Dallas","Cole","Starsha","Philliper","Yorlanda?","Ben"];
+			var all_s = ["Rowan"];
 			var all_t = [];
 			var x = "";
 			function selctor() {

@@ -73,3 +73,7 @@ p {
 #error {
 	color:red;
 }
+
+.#class_select {
+	width:100px;
+}
