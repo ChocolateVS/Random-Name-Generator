@@ -15,10 +15,11 @@
 			<br>
 			<br>
 			<span id="random_result"></span>
-			<span id="thatsall">HIIIII</span>
+			<br>
+			<span id="thatsall">That's all of Us!</span>
 			<script>
 			var x = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","Mrs Harris :)"];
-			document.querySelector("#thatsall").style.display = "none"; 
+			document.querySelector("#thatsall").style.visibility = "hidden"; 
 			function random_name() {
 				var random = Math.floor(Math.random()*(x.length));
 				document.getElementById('random_result').innerHTML = x[random];
@@ -32,7 +33,7 @@
 					var node = "That's All";
 					document.querySelector("#random_button").style.display = "none"; 
 					document.querySelector("#random_result").style.display = "none";
-					document.querySelector("#thatsall").style.display = "visible"; 
+					document.querySelector("#thatsall").style.visibility = "visible"; 
 				}
 			}
 			</script>
