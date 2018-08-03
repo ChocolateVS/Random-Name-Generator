@@ -20,7 +20,9 @@
 			<script>
 			var x = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","Mrs Harris :)"];
 			document.querySelector("#thatsall").style.visibility = "hidden"; 
+			document.querySelector("#box").style.visibility = "visible"; 
 			function random_name() {
+				document.querySelector("#box").style.visibility = "visible"; 
 				var random = Math.floor(Math.random()*(x.length));
 				document.getElementById('random_result').innerHTML = x[random];
 				console.log(x[random]);

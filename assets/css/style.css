@@ -49,7 +49,6 @@ span#box {
 	flex-direction:column;
 	background-color:rgba(100,100,100,0.6);
 	max-height:300px;
-	height:auto;
 }
 #box p{
 	width:100px;
