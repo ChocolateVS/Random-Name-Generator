@@ -26,8 +26,9 @@ button:hover, input:hover {
 	transform:scale(1.2);
 	transition-duration:1s;
 }
-.random_result {
+#random_result {
 	text-align:center;
+	font-size:30px;
 }
 .current_names {
 	padding:20;
@@ -60,6 +61,7 @@ footer {
 	position:absolute;
 	padding-right:10px;
 	color:white;
+	margin-top:30px;
 }
 
 p {
