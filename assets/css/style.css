@@ -38,32 +38,18 @@ span#box {
 	font-size:20px;
 	padding:20px;
 	margin:10px;
-	left:0;
-	position:absolute;
-	float:left;
 	display:flex;
 	flex-direction:column;
 	background-color:rgba(100,100,100,0.6);
 	flex-wrap:wrap;
 	max-height:300px;
-	height:auto;
-	width:auto;
 }
 
 .current_container {
-	font-size:20px;
-	padding:20px;
-	margin:10px;
-	left:0;
-	position:absolute;
-	float:left;
-	display:flex;
 	flex-direction:column;
 	background-color:rgba(100,100,100,0.6);
-	flex-wrap:wrap;
 	max-height:300px;
 	height:auto;
-	width:auto;
 }
 #box p{
 	width:100px;

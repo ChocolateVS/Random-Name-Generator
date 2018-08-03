@@ -1,0 +1,94 @@
+<html>
+	<head>
+	<title>Random Name Generator</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Arvo">
+	</head>
+	<body>
+		<header>
+		</header>
+		<main>
+			<h1>Welcome to the random name generator for MAE1</h1>
+			<h2>Click below for a random name</h2>
+			<button id="random_button" onclick="random_name()">Click Me</button>
+			<!--<input type="button" id="refresh" value="Refresh Page" onClick="window.location.reload()">-->
+			<br>
+			<br>
+			<span id="random_result"></span>
+			<div id="thatsall"></div>
+			<script>
+			var x = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","Mrs Harris :)"];
+			function random_name() {
+				var random = Math.floor(Math.random()*(x.length));
+				document.getElementById('random_result').innerHTML = x[random];
+				console.log(x[random]);
+				var newName = document.createElement("p");
+				newName.innerHTML = x[random];
+				document.querySelector("#box").appendChild(newName);
+				x.splice(random,1);
+				document.querySelector("#box").style.display = "visible"; 
+				if(x.length == 0) { 
+					document.querySelector("#random_button").style.display = "none"; 
+					document.querySelector("#random_result").style.display = "none";
+					<html>
+	<head>
+	<title>Random Name Generator</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Arvo">
+	</head>
+	<body>
+		<header>
+		</header>
+		<main>
+			<h1>Welcome to the random name generator for MAE1</h1>
+			<h2>Click below for a random name</h2>
+			<button id="random_button" onclick="random_name()">Click Me</button>
+			<!--<input type="button" id="refresh" value="Refresh Page" onClick="window.location.reload()">-->
+			<br>
+			<br>
+			<span id="random_result"></span>
+			<div id="thatsall">
+			<script>
+			var x = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","Mrs Harris :)"];
+			function random_name() {
+				var random = Math.floor(Math.random()*(x.length));
+				document.getElementById('random_result').innerHTML = x[random];
+				console.log(x[random]);
+				var newName = document.createElement("p");
+				newName.innerHTML = x[random];
+				document.querySelector("#box").appendChild(newName);
+				x.splice(random,1);
+				document.querySelector("#box").style.display = "visible"; 
+				if(x.length == 0) { 
+					document.querySelector("#random_button").style.display = "none"; 
+					document.querySelector("#random_result").style.display = "none";
+				}
+			}
+			</script>
+			<div id="current_container">
+				<h2 class="current_names">Current Names</h2>
+				<span id="box">
+				</span>
+			</div>
+		</main>
+		<footer>
+		<input type="button" id="refresh" value="Refresh Page" onClick="window.location.reload()">
+		<p>Created by Rowan Thorley</p>
+		</footer>
+	</body>
+</html>
+				}
+			}
+			</script>
+			<div id="current_container">
+				<h2 class="current_names">Current Names</h2>
+				<span id="box">
+				</span>
+			</div>
+		</main>
+		<footer>
+		<input type="button" id="refresh" value="Refresh Page" onClick="window.location.reload()">
+		<p>Created by Rowan Thorley</p>
+		</footer>
+	</body>
+</html>

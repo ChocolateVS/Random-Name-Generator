@@ -14,11 +14,11 @@
 			<!--<input type="button" id="refresh" value="Refresh Page" onClick="window.location.reload()">-->
 			<br>
 			<br>
-			<br>
-			<br>
 			<span id="random_result"></span>
+			<span id="thatsall">HIIIII</span>
 			<script>
 			var x = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","Mrs Harris :)"];
+			document.querySelector("#thatsall").style.display = "none"; 
 			function random_name() {
 				var random = Math.floor(Math.random()*(x.length));
 				document.getElementById('random_result').innerHTML = x[random];
@@ -27,8 +27,13 @@
 				newName.innerHTML = x[random];
 				document.querySelector("#box").appendChild(newName);
 				x.splice(random,1);
-				if(x.length == 0) document.querySelector("#random_button").style.display = "none"; 
-				if(x.length == 0) document.querySelector("#random_result").style.display = "none";
+				document.querySelector("#box").style.display = "visible"; 
+				if(x.length == 0) { 
+					var node = "That's All";
+					document.querySelector("#random_button").style.display = "none"; 
+					document.querySelector("#random_result").style.display = "none";
+					document.querySelector("#thatsall").style.display = "visible"; 
+				}
 			}
 			</script>
 			<div id="current_container">
