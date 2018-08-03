@@ -8,17 +8,102 @@
 		<header>
 		</header>
 		<main>
-			<h1>Welcome to the random name generator for MAE1</h1>
-			<h2>Click below for a random name</h2>
+		<!-- Main -->
+		<center>
+			<h1 id="welcome">Welcome to the random name generator for my classes</h1>
+			<h2 id="h2_select">Please Select a class</h2>
+			<h2 id="h2_click">Click below for a random name</h2>
 			<button id="random_button" onclick="random_name()">Click Me</button>
-			<!--<input type="button" id="refresh" value="Refresh Page" onClick="window.location.reload()">-->
 			<br>
-			<br>
+		</center>
+		<!-- Selector -->	
+			<select style="width: 200px" id="class_select" name="class_selector">
+				<option value="0" selected="">Please Select</option>
+				<option value="1">MAE1</option>
+				<option value="2">ENA1</option>
+				<option value="3">MUSIC</option>
+				<option value="4">DTH</option>
+				<option value="5">SCP</option>
+				<option value="6">PE</option>
+				<option value="7">All Students</option>
+				<option value="8">All Teachers</option>
+			</select>
+			<input type="button" id="class_select_button" value="OK" onClick="selctor()">
+			<p id="error">Please Select A class!</p>
+		<!-- Text -->
 			<span id="random_result"></span>
-			<div id="thatsall"></div>
+			<span id="thatsall">That's all of Us!</span>
+		<!-- Current Names -->
+			<div id="current_container">
+				<span id="box">
+					<h2 class="current_names">Current Names</h2>
+					<br>
+				</span>
+			</div>
+		<!-- Tip -->
+			<p id="tip">
+			Tip, to see all the names in order, HOLD: CTRL + SHIFT + I, then click CONSOLE 
+			<br>
+			Dont worry about the errors (highlited in red), they shouldn't be there any anyway
+			</p>
+		<!-- Script -->
 			<script>
-			var x = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","Mrs Harris :)"];
+			document.getElementById("tip").style.visibility = "hidden"; 
+			document.querySelector("#error").style.display = "none";
+			document.querySelector("#h2_click").style.display = "none"; 
+			document.querySelector("#random_button").style.display = "none"; 
+			document.querySelector("#thatsall").style.display = "none"; 	
+			document.querySelector("#current_container").style.visibility = "hidden"; 	
+			var mae = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","Mrs Harris :)"];
+			var eng = ["Rowan","Isaac","Racheal","Nate", "Tui","Hinewai","Josh","Tommy","Olivia","Sophie","Lucy","Chloe","Emily","Rose","Jessica","Samuel","Harry"];
+			var mus = ["Rowan", "Isaac", "Nate","Ben","Lucy","Molly","Racheal","Harry","Macy","Henry","Cantona???",];
+			var dth = [];
+			var scp = [];
+			var pe = [];
+			var all_s = [];
+			var all_t = [];
+			var x = "";
+			function selctor() {
+			var selected_class = document.getElementById("class_select").value;
+			console.log(selected_class)
+			if (selected_class > 0) {
+			document.querySelector("#error").style.display = "none";
+				if (selected_class == 1) {
+				 x = mae;
+				}
+				if (selected_class == 2) {
+				 x = eng;
+				}
+				if (selected_class == 3) {
+				 x = mus;
+				}
+				if (selected_class == 4) {
+				 x = dth;
+				}
+				if (selected_class == 5) {
+				 x = scp;
+				}
+				if (selected_class == 6) {
+				 x = pe;
+				}
+				if (selected_class == 7) {
+				 x = all_s;
+				}
+				if (selected_class == 8) {
+				 x = all_t;
+				}
+				document.querySelector("#class_select").style.display = "none"; 
+				document.querySelector("#class_select_button").style.display = "none"; 
+				document.querySelector("#random_button").style.display = "block"; 
+				document.querySelector("#h2_click").style.display = "block"; 
+			}
+				else {
+				document.querySelector("#error").style.display = "block";
+				}
+			}
+			
 			function random_name() {
+				document.querySelector("#current_container").style.visibility = "visible"; 
 				var random = Math.floor(Math.random()*(x.length));
 				document.getElementById('random_result').innerHTML = x[random];
 				console.log(x[random]);
@@ -28,67 +113,18 @@
 				x.splice(random,1);
 				document.querySelector("#box").style.display = "visible"; 
 				if(x.length == 0) { 
+					var node = "That's All";
 					document.querySelector("#random_button").style.display = "none"; 
 					document.querySelector("#random_result").style.display = "none";
-					<html>
-	<head>
-	<title>Random Name Generator</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Arvo">
-	</head>
-	<body>
-		<header>
-		</header>
-		<main>
-			<h1>Welcome to the random name generator for MAE1</h1>
-			<h2>Click below for a random name</h2>
-			<button id="random_button" onclick="random_name()">Click Me</button>
-			<!--<input type="button" id="refresh" value="Refresh Page" onClick="window.location.reload()">-->
-			<br>
-			<br>
-			<span id="random_result"></span>
-			<div id="thatsall">
-			<script>
-			var x = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","Mrs Harris :)"];
-			function random_name() {
-				var random = Math.floor(Math.random()*(x.length));
-				document.getElementById('random_result').innerHTML = x[random];
-				console.log(x[random]);
-				var newName = document.createElement("p");
-				newName.innerHTML = x[random];
-				document.querySelector("#box").appendChild(newName);
-				x.splice(random,1);
-				document.querySelector("#box").style.display = "visible"; 
-				if(x.length == 0) { 
-					document.querySelector("#random_button").style.display = "none"; 
-					document.querySelector("#random_result").style.display = "none";
+					document.querySelector("#thatsall").style.display = "block"; 
+					document.querySelector("#tip").style.visibility = "visible";
 				}
 			}
 			</script>
-			<div id="current_container">
-				<h2 class="current_names">Current Names</h2>
-				<span id="box">
-				</span>
-			</div>
 		</main>
 		<footer>
-		<input type="button" id="refresh" value="Refresh Page" onClick="window.location.reload()">
-		<p>Created by Rowan Thorley</p>
-		</footer>
-	</body>
-</html>
-				}
-			}
-			</script>
-			<div id="current_container">
-				<h2 class="current_names">Current Names</h2>
-				<span id="box">
-				</span>
-			</div>
-		</main>
-		<footer>
-		<input type="button" id="refresh" value="Refresh Page" onClick="window.location.reload()">
-		<p>Created by Rowan Thorley</p>
+			<input type="button" id="refresh" value="Refresh Page" onClick="window.location.reload()">
+			<p>Created by Rowan Thorley</p>
 		</footer>
 	</body>
 </html>

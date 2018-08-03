@@ -69,3 +69,7 @@ footer {
 p {
 	color:white;
 }
+
+#error {
+	color:red;
+}

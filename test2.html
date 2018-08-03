@@ -1,0 +1,61 @@
+<html>
+	<head>
+	<title>Random Name Generator</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Arvo">
+	</head>
+	<body>
+		<header>
+		</header>
+		<main>
+			<h1>Welcome to the random name generator for MAE1</h1>
+			<h2>Click below for a random name</h2>
+			<button id="random_button" onclick="random_name()">Click Me</button>
+			<!--<input type="button" id="refresh" value="Refresh Page" onClick="window.location.reload()">-->
+			<br>
+			<br>
+			<span id="random_result"></span>
+			<br>
+			<span id="thatsall">That's all of Us!</span>
+			<div id="current_container">
+				<span id="box">
+					<h2 class="current_names">Current Names</h2>
+					<br>
+				</span>
+			</div>
+			<p id="tip">
+			Tip, to see all the names in order, HOLD: CTRL + SHIFT + I, then click CONSOLE 
+			<br>
+			Dont worry about the errors (highlited in red), they shouldn't be there any anyway
+			</p>
+			<script>
+			var x = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","Mrs Harris :)"];
+			document.getElementById("tip").style.display = "none"; 
+			document.querySelector("#thatsall").style.display = "none";		
+			document.querySelector("#current_container").style.display = "none"; 		
+			function random_name() {
+				document.querySelector("#current_container").style.display = "inline-block"; 
+				var random = Math.floor(Math.random()*(x.length));
+				document.getElementById('random_result').innerHTML = x[random];
+				console.log(x[random]);
+				var newName = document.createElement("p");
+				newName.innerHTML = x[random];
+				document.querySelector("#box").appendChild(newName);
+				x.splice(random,1);
+				document.querySelector("#box").style.display = "inline-block"; 
+				if(x.length == 0) { 
+					var node = "That's All";
+					document.querySelector("#random_button").style.display = "none"; 
+					document.querySelector("#random_result").style.display = "none";
+					document.querySelector("#thatsall").style.display = "inline-block"; 
+					document.querySelector("#tip").style.display = "inline-block";
+				}
+			}
+			</script>
+		</main>
+		<footer>
+		<input type="button" id="refresh" value="Refresh Page" onClick="window.location.reload()">
+		<p>Created by Rowan Thorley</p>
+		</footer>
+	</body>
+</html>
