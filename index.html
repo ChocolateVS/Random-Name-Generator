@@ -52,98 +52,98 @@
 			</p>
 		<!-- Script -->
 			<script>
-			//Hide Items on page load
-			document.getElementById("tip").style.visibility = "hidden"; 
-			document.querySelector("#error").style.display = "none";
-			document.querySelector("#h2_click").style.display = "none"; 
-			document.querySelector("#random_button").style.display = "none"; 
-			document.querySelector("#thatsall").style.display = "none"; 
-			document.querySelector("#h2_select").style.display = "none";
-			document.querySelector("#class_select").style.display = "none";
-			document.querySelector("#class_select_button").style.display = "none";			
-			document.querySelector("#current_container").style.visibility = "hidden"; 	
-			
-			//Original Arrays
-			var mae = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","Mrs Harris :)"];
-			var eng = ["Rowan","Isaac","Racheal","Nate", "Tui","Hinewai","Josh","Tommy","Olivia","Sophie","Lucy","Chloe","Emily","Rose","Jessica","Samuel","Harry"];
-			var mus = ["Rowan", "Isaac","Caleb","Nate","Ben","Lucy","Molly","Rose","Racheal","Harry","Macy","Henry","Cantona???",];
-			var dth = ["Rowan","Blake","Aidan C","Aidan O","Ethan","Frank","Samuel","Isaac","Nate","Tyler","Alice","Jared","","","","","","","","","",""];
-			var scp = ["Rowan","Aidan","Hasan","Oran","Jack","Jacob","Mohit","Reuben","Luke"];
-			var pe = ["Rowan","Lucy","Charlie","Jono St","Ben","Jono Sa","Jacob","Aidan","Tyler","Jared","Luke","","",""];
-			var form = ["Rowan","Toby","Josh","Jacob","Jack","Dallas","Cole","Starsha","Philliper","Yorlanda?","Ben"];
-			var all_s = ["Rowan"];
-			var all_t = [];
-			
-			//Other Variables
-			var x = "";
-			
-			function original_selector() {
-				document.querySelector("#h2_select").style.display = "block";
-				document.querySelector("#class_select").style.display = "inline-block";
-				document.querySelector("#class_select_button").style.display = "inline-block";
-				document.querySelector("#h2_choose").style.display = "block";
-				document.querySelector("#create_button").style.display = "none";
-				document.querySelector("#custom_button").style.display = "none";
-				document.querySelector("#original_button").style.display = "none";
-			}
-			
-			//Original Selector Function
-			function selector() {
-				var selected_class = document.getElementById("class_select").value;
-				console.log(selected_class)
-				if (selected_class > 0) {
+				//Hide Items on page load
+				document.getElementById("tip").style.visibility = "hidden"; 
 				document.querySelector("#error").style.display = "none";
-					if (selected_class == 1) {
-					 x = mae;
-					}
-					if (selected_class == 2) {
-					 x = eng;
-					}
-					if (selected_class == 3) {
-					 x = mus;
-					}
-					if (selected_class == 4) {
-					 x = dth;
-					}
-					if (selected_class == 5) {
-					 x = scp;
-					}
-					if (selected_class == 6) {
-					 x = pe;
-					}
-					if (selected_class == 7) {
-					 x = all_s;
-					}
-					if (selected_class == 8) {
-					 x = all_t;
-					}
-					document.querySelector("#class_select").style.display = "none"; 
-					document.querySelector("#class_select_button").style.display = "none"; 
-					document.querySelector("#random_button").style.display = "block"; 
-					document.querySelector("#h2_click").style.display = "block"; 
-			}
-				else {
-					document.querySelector("#error").style.display = "block";
+				document.querySelector("#h2_click").style.display = "none"; 
+				document.querySelector("#random_button").style.display = "none"; 
+				document.querySelector("#thatsall").style.display = "none"; 
+				document.querySelector("#h2_select").style.display = "none";
+				document.querySelector("#class_select").style.display = "none";
+				document.querySelector("#class_select_button").style.display = "none";			
+				document.querySelector("#current_container").style.visibility = "hidden"; 	
+				
+				//Original Arrays
+				var mae = ["Rowan","Blake L","Isaac","Seb","Henry","Alistair","Olivia","Mya","Blake A","Zara","Josie","William","Emma","TH","Josh","Emily","Jessica","Mrs Harris :)"];
+				var eng = ["Rowan","Isaac","Racheal","Nate", "Tui","Hinewai","Josh","Tommy","Olivia","Sophie","Lucy","Chloe","Emily","Rose","Jessica","Samuel","Harry"];
+				var mus = ["Rowan", "Isaac","Caleb","Nate","Ben","Lucy","Molly","Rose","Racheal","Harry","Macy","Henry","Cantona???",];
+				var dth = ["Rowan","Blake","Aidan C","Aidan O","Ethan","Frank","Samuel","Isaac","Nate","Tyler","Alice","Jared","","","","","","","","","",""];
+				var scp = ["Rowan","Aidan","Hasan","Oran","Jack","Jacob","Mohit","Reuben","Luke"];
+				var pe = ["Rowan","Lucy","Charlie","Jono St","Ben","Jono Sa","Jacob","Aidan","Tyler","Jared","Luke","","",""];
+				var form = ["Rowan","Toby","Josh","Jacob","Jack","Dallas","Cole","Starsha","Philliper","Yorlanda?","Ben"];
+				var all_s = ["Rowan"];
+				var all_t = ['Mr-John-McDonnella','Mrs-Carol-Webb','Mr-Marcel-Kuijpers','Mrs-Sandra-McKinnona','Mrs-Kate-Campion','Mr-Joel-Baker','Ms-Helen-Smythe','Mrs-Amanda-Wright','Mrs-Shirley-Dudli','Mr-Grant-Ackerman','Mrs-Teresa-Bayly','Mrs-Pip-Feast','Mr-Zane-Holton','Mr-Carl-Hudson','Mr-Michael-Johansen','Mr-Blair-Ludlam','Miss-Barbara-Morgana','Mrs-Karyn-Porton','Ms-Helen-Smythe','Mrs-Tina-Rose-Dutton','Mr-Chresten-Davis','Mrs-acy-Perry','Mr-Chresten-Davis','Mr-Jeremy-Wright','Mrs-Melanie-Schroeder','Mr-Jordan-Newlands','Mr-Stephen-Slaney','Ms-Julianne-Lewis','Mr-Ben-Campion','Mrs-Kylie-Gread','Mrs-Lana-Purdona','Mrs-Rachel-Wallis','Ms-Sarah-Douglas','Mrs-acy-Perry','Mrs-Sarah-Monkley','Miss-Amber-Van-Dam','Mr-Craig-Fuller','Mr-Tony-Broadbent','Mr-Marty-Gleave','Mrs-Michelle-Atger','Mrs-Glenys-Ackerman','Mr-Grant-Ackerman','Mrs-Mary-Ball','Mr-Shaheed-Basha','Mrs-Teresa-Baylya','Ms-Glenys-Biggea','Ms-Jenneine-Blumhard','Mrs-Vicky-Bradshaw-Monks','Miss-Elsa-Brown','Miss-Brianna-Butler','Mrs-Zani-Button','Mr-Ben-Campion','Mrs-Bonny-Cannon','Ms-Vyonna-Conrad','Miss-Katy-Cooper','Mr-Mahaki-Corbett-Matua','Miss-Isobel-Daviesa','Mr-Chresten-Davis','Mr-Chris-Dillon','Mrs-Heather-Dixon','Ms-Sarah-Douglas','Mrs-Shirley-Dudli','Mr-Murray-Feast','Mrs-Pip-Feast','Mr-Craig-Fuller','Miss-Alana-Gain','Ms-Sarah-Gaze','Mrs-Crystal-Gerring','Ms-Rosemary-Gluyas','Mrs-Kylie-Greada','Mr-Tian-Hancke','Mr-John-Hanson','Mrs-Hayley-Harris','Ms-Jenny-Haugh','Ms-Ailsa-Henderson','Mr-Zane-Holtona','Mr-Carl-Hudson','Mr-Michael-Johansena','Ms-Laura-Kannan','Mr-Deo-Lal','Mr-Rati-Lal','Mrs-Susan-Laurent','Mrs-Paicia-Lemire','Mrs-Julianne-Lewis','Mr-Blair-Ludlama','Ms-Janine-Maclarn','Mr-Gareth-Manins','Mrs-Nadia-Matson','Miss-Abi-May','Mr-Chris-McNair','Ms-Holly-Miller','Mrs-Sarah-Monkley','Mrs-Asid-Mook','Mrs-Sarah-Nelson','Mr-Jordan-Newlands','Mrs-Phillipa-Oranje','Ms-acy-Perry','Mr-Jonnie-Peter','Mr-Daniel-Peters','Mrs-Larissa-Peters','Mrs-Alison-Porter','Mrs-Karyn-Porton','Ms-Katherine-Powell','Mrs-Lana-Purdon','Mrs-Lisa-Rae','Mr-Georg-Rautenbach','Mrs-Nini-Ripandelli','Miss-Annuska-Robinson','Mrs-Tina-Rose-Dutton','Mr-Darran-Rowe','Miss-Larissa-Schumacher','Mrs-Heidi-Schreiber','Mrs-Melanie-Schroeder','Ms-Jina-Sickelmore','Mrs-Rose-Simmons','Mr-Bruce-Siriett','Mr-Stephen-Slaney','Ms-Helen-Smythe','Mr-Warren-Steffert','Ms-Denise-Stevens','Mr-Alan-Steward','Mrs-Erin-Stewart','Mr-Glen-Stichbury','Ms-Lyn-Tairi','Ms-Mary-Talbot','Mr-Drew-Tierney','Miss-Vanessa-Tupp','Mrs-Pam-Uttinger','Miss-Amber-Van-Dam','Ms-Stephanie-Vervoort','Mrs-Rachel-Wallis','Ms-Paula-Walsh','Mr-Edward-Walthew','Mrs-Alana-Wellsa','Mr-Keith-Weston','Mr-Colin-Wood','Mr-Paick-Woodlock','Mr-Jeremy-Wright','Mrs-Michelle-Santya','Mrs-Deborah-Godwina','Mrs-Kirsty-Stannard','Mrs-Judy-Robinson','Mrs-Deirdre-Camerona','Mrs-Angela-Purdiea','Mrs-Sharmion-Kirkbride','Mrs-Carmen-Rautenbacha','Mrs-Wendy-Rousseau','Mrs-Pam-Woodhamsa','Mrs-Di-McLean','Mrs-Catherine-Hendren','Mrs-Kirsten-Allison','Mrs-Glenys-Bichan','Library-Adminisator','Mrs-Lynley-Keightley','Mr-Tony-Ecclesa','Mr-Matthew-Bright','Mrs-Liz-Wilson','Mrs-Kathy-Curtin','Mrs-Julieanne-Seath','Mrs-Christine-Smith','Mrs-Kathy-Colea','Mr-Philip-Geck','Mr-evarr-McCarthy','Mrs-Jacqueline-Stephenson','Mrs-Sherril-Steward','Mrs-Jane-Hansen','Mrs-Andrea-Wolfsbauer','Mrs-Judy-Waters','Mrs-Heidi-Caesar','Mr-Neal-Monzari','Mrs-Diana-Berney','Mrs-Renie-O','Briena','Mr-Keith-Robinson','Mr-Marty-Senior','Mr-Neil-Ward','Chris-Nations','Elsie-Kane','Clive-Burnell','Adrian-Haywood','Cameron-Olsen'];
+				
+				//Other Variables
+				var x = "";
+				
+				function original_selector() {
+					document.querySelector("#h2_select").style.display = "block";
+					document.querySelector("#class_select").style.display = "inline-block";
+					document.querySelector("#class_select_button").style.display = "inline-block";
+					document.querySelector("#h2_choose").style.display = "none";
+					document.querySelector("#create_button").style.display = "none";
+					document.querySelector("#custom_button").style.display = "none";
+					document.querySelector("#original_button").style.display = "none";
 				}
-			}
-			
-			function random_name() {
-				document.querySelector("#current_container").style.visibility = "visible"; 
-				var random = Math.floor(Math.random()*(x.length));
-				document.getElementById('random_result').innerHTML = x[random];
-				console.log(x[random]);
-				var newName = document.createElement("p");
-				newName.innerHTML = x[random];
-				document.querySelector("#box").appendChild(newName);
-				x.splice(random,1);
-				document.querySelector("#box").style.display = "visible"; 
-				if(x.length == 0) { 
-					var node = "That's All";
-					document.querySelector("#random_button").style.display = "none"; 
-					document.querySelector("#random_result").style.display = "none";
-					document.querySelector("#thatsall").style.display = "block"; 
-					document.querySelector("#tip").style.visibility = "visible";
+				
+				//Original Selector Function
+				function selector() {
+					var selected_class = document.getElementById("class_select").value;
+					console.log(selected_class)
+					if (selected_class > 0) {
+					document.querySelector("#error").style.display = "none";
+						if (selected_class == 1) {
+						 x = mae;
+						}
+						if (selected_class == 2) {
+						 x = eng;
+						}
+						if (selected_class == 3) {
+						 x = mus;
+						}
+						if (selected_class == 4) {
+						 x = dth;
+						}
+						if (selected_class == 5) {
+						 x = scp;
+						}
+						if (selected_class == 6) {
+						 x = pe;
+						}
+						if (selected_class == 7) {
+						 x = all_s;
+						}
+						if (selected_class == 8) {
+						 x = all_t;
+						}
+						document.querySelector("#class_select").style.display = "none"; 
+						document.querySelector("#class_select_button").style.display = "none"; 
+						document.querySelector("#random_button").style.display = "block"; 
+						document.querySelector("#h2_click").style.display = "block"; 
 				}
+					else {
+						document.querySelector("#error").style.display = "block";
+					}
+				}
+				
+				function random_name() {
+					document.querySelector("#current_container").style.visibility = "visible"; 
+					var random = Math.floor(Math.random()*(x.length));
+					document.getElementById('random_result').innerHTML = x[random];
+					console.log(x[random]);
+					var newName = document.createElement("p");
+					newName.innerHTML = x[random];
+					document.querySelector("#box").appendChild(newName);
+					x.splice(random,1);
+					document.querySelector("#box").style.display = "visible"; 
+					if(x.length == 0) { 
+						document.querySelector("#random_button").style.display = "none"; 
+						document.querySelector("#random_result").style.display = "none";
+						document.querySelector("#thatsall").style.display = "block"; 
+						document.querySelector("#tip").style.visibility = "visible";
+				}
+					
 			}
 			</script>
 		</main>
